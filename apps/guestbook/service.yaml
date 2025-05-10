@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: guestbook-ui
   namespace: default
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-healthcheck-port: "3000"
 spec:
   selector:
     app: guestbook-ui
