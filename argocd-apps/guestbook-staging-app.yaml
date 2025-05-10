@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook-staging
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/yyhao0422/gitops-guestbook-app.git
+    targetRevision: HEAD
+    path: apps/guestbook
+  destination:
+    server: https://B4C673BBEB8E44A2AE1B3E629D947A5E.gr7.ap-southeast-1.eks.amazonaws.com
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
