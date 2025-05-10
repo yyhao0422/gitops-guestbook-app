@@ -18,4 +18,3 @@ This repo is for creation of argocd app. You can use argocd-apps/guestbook-stagi
 
 1. Add this github path into it.
 2. For the path, use apps/guestbook
-   '
