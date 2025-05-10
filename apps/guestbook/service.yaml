@@ -4,7 +4,7 @@ metadata:
   name: guestbook-ui
   namespace: default
   annotations:
-    service.beta.kubernetes.io/aws-load-balancer-healthcheck-port: "3000"
+    service.beta.kubernetes.io/aws-load-balancer-healthcheck-port: "80"
 spec:
   selector:
     app: guestbook-ui
